@@ -156,21 +156,23 @@
             // altaProductoToolStripMenuItem2
             // 
             this.altaProductoToolStripMenuItem2.Name = "altaProductoToolStripMenuItem2";
-            this.altaProductoToolStripMenuItem2.Size = new System.Drawing.Size(179, 26);
+            this.altaProductoToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
             this.altaProductoToolStripMenuItem2.Text = "Alta";
             this.altaProductoToolStripMenuItem2.Click += new System.EventHandler(this.altaProductoToolStripMenuItem2_Click);
             // 
             // modificacionProductoToolStripMenuItem1
             // 
             this.modificacionProductoToolStripMenuItem1.Name = "modificacionProductoToolStripMenuItem1";
-            this.modificacionProductoToolStripMenuItem1.Size = new System.Drawing.Size(179, 26);
+            this.modificacionProductoToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.modificacionProductoToolStripMenuItem1.Text = "Modificacion";
+            this.modificacionProductoToolStripMenuItem1.Click += new System.EventHandler(this.modificacionProductoToolStripMenuItem1_Click);
             // 
             // eliminarProductoToolStripMenuItem2
             // 
             this.eliminarProductoToolStripMenuItem2.Name = "eliminarProductoToolStripMenuItem2";
-            this.eliminarProductoToolStripMenuItem2.Size = new System.Drawing.Size(179, 26);
+            this.eliminarProductoToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
             this.eliminarProductoToolStripMenuItem2.Text = "Eliminar";
+            this.eliminarProductoToolStripMenuItem2.Click += new System.EventHandler(this.eliminarProductoToolStripMenuItem2_Click);
             // 
             // clientesToolStripMenuItem
             // 
@@ -279,7 +281,7 @@
             // lblOpcion2
             // 
             this.lblOpcion2.AutoSize = true;
-            this.lblOpcion2.Location = new System.Drawing.Point(137, 329);
+            this.lblOpcion2.Location = new System.Drawing.Point(87, 329);
             this.lblOpcion2.Name = "lblOpcion2";
             this.lblOpcion2.Size = new System.Drawing.Size(44, 16);
             this.lblOpcion2.TabIndex = 10;

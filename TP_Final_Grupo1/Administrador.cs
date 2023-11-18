@@ -20,7 +20,7 @@ namespace TP_Final_Grupo1
             productoLogica = new ProductoLogica();
         }
 
-     
+
         private void altaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
@@ -28,19 +28,212 @@ namespace TP_Final_Grupo1
             lblOpcion1.Visible = true;
             lblOpcion2.Visible = true;
             lblOpcion5.Text = "TipoIva";
-            //txtOpcion1.Text = "";
-            //txtOpcion2.Text = "";
             lblOpcion1.Text = "Descripcion";
             lblOpcion2.Text = "Porcentaje";
             txtOpcion1.Visible = true;
             txtOpcion2.Visible = true;
+            txtOpcion3.Visible = false;
             btn_Agregar.Visible = true;
             btn_Modificar.Visible = false;
             btn_Eliminar.Visible = false;
             chkHabilitado.Visible = true;
+            cboOpcion.Visible = false;
+            cboUnidadMedida.Visible = false;
+            lblOpcion3.Visible = false;
             ConfigurarColumnasTipoIvaDataGridView();
             CargarDatosTipoIvaDataGridView();
-            CargarTiposIvaEnComboBox();
+        }
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            dgvOpcion.Rows.Clear();
+            lblOpcion1.Visible = true;
+            lblOpcion2.Visible = true;
+            lblOpcion5.Text = "TipoIva";
+            lblOpcion1.Text = "Descripcion";
+            lblOpcion2.Text = "Porcentaje";
+            lblOpcion3.Visible = false;
+            txtOpcion1.Visible = true;
+            txtOpcion2.Visible = true;
+            cboOpcion.Visible = true;
+            txtOpcion3.Visible = false;
+            btn_Agregar.Visible = false;
+            btn_Eliminar.Visible = false;
+            btn_Modificar.Visible = true;
+            chkHabilitado.Visible = true;
+            cboUnidadMedida.Visible = false;
+            ConfigurarColumnasTipoIvaDataGridView();
+            CargarDatosTipoIvaDataGridView();
+        }
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            dgvOpcion.Rows.Clear();
+            lblOpcion1.Visible = true;
+            lblOpcion2.Visible = true;
+            lblOpcion5.Text = "TipoIva";
+            lblOpcion1.Text = "Descripcion";
+            lblOpcion2.Text = "Porcentaje";
+            txtOpcion1.Visible = true;
+            txtOpcion2.Visible = true;
+            btn_Agregar.Visible = false;
+            btn_Modificar.Visible = false;
+            btn_Eliminar.Visible = true;
+            chkHabilitado.Visible = true;
+            cboOpcion.Visible= true;
+
+            ConfigurarColumnasTipoIvaDataGridView();
+            CargarDatosTipoIvaDataGridView();
+        }
+        private void altaUnidadDeMedidaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            dgvOpcion.Rows.Clear();
+            lblOpcion1.Visible = true;
+            lblOpcion2.Visible = false;
+            lblOpcion5.Text = "AltaUnidadMedida";
+            txtOpcion1.Text = "";
+            lblOpcion1.Text = "Descripcion";
+            txtOpcion1.Visible = true;
+            txtOpcion2.Visible = false;
+            btn_Agregar.Visible = true;
+            btn_Modificar.Visible = false;
+            btn_Eliminar.Visible = false;
+            chkHabilitado.Visible = true;
+            cboOpcion.Visible = false;
+            ConfigurarColumnasUnidadDeMedidaDataGridView();
+            CargarDatosUnidadDeMedidaDataGridView();
+            //CargarDatosUnidadMedidaSeleccionado();
+            //CargarUnidadesMedidaEnComboBox();
+        }
+        private void modificacionUnidadDeMedidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            dgvOpcion.Rows.Clear();
+            lblOpcion1.Visible = true;
+            lblOpcion5.Text = "AltaUnidadMedida";
+            lblOpcion1.Text = "Descripcion";
+            txtOpcion1.Visible = true;
+            btn_Agregar.Visible = false;
+            btn_Modificar.Visible = true;
+            btn_Eliminar.Visible = false;
+            chkHabilitado.Visible = true;
+            cboOpcion.Visible = true;
+            ConfigurarColumnasUnidadDeMedidaDataGridView();
+            CargarDatosUnidadDeMedidaDataGridView();
+            //CargarDatosUnidadMedidaSeleccionado();
+            //CargarUnidadesMedidaEnComboBox();
+        }
+        private void eliminarUnidadDeMedidaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            dgvOpcion.Rows.Clear();
+            lblOpcion5.Text = "AltaUnidadMedida";
+            lblOpcion1.Visible = true;
+            lblOpcion1.Text = "Descripcion";
+            txtOpcion1.Visible = true;
+            txtOpcion2.Visible = false;
+            btn_Agregar.Visible = false;
+            btn_Modificar.Visible = false;
+            btn_Eliminar.Visible = true;
+            chkHabilitado.Visible = true;
+            cboOpcion.Visible = true;
+            ConfigurarColumnasUnidadDeMedidaDataGridView();
+            CargarDatosUnidadDeMedidaDataGridView();
+            CargarDatosUnidadMedidaSeleccionado();
+            CargarUnidadesMedidaEnComboBox();
+        }
+        private void altaProductoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            //Alta
+            LimpiarCampos();
+            lblOpcion5.Text = "Producto";
+            dgvOpcion.Rows.Clear();
+            lblOpcion1.Visible = true;
+            lblOpcion2.Visible = true;
+            lblOpcion3.Visible = true;
+
+            lblOpcion1.Text = "Descripcion";
+            lblOpcion2.Text = "Unidad de Medida";
+            lblOpcion3.Text = "Valor Unitario";
+
+            txtOpcion1.Visible = true;
+            txtOpcion2.Visible = false;
+            txtOpcion3.Visible = true;
+            btn_Agregar.Visible = true;
+            btn_Modificar.Visible = false;
+            btn_Eliminar.Visible = false;
+            chkHabilitado.Visible = true;
+            cboUnidadMedida.Visible = true;
+            cboOpcion.Visible = false;
+            ConfigurarColumnasProductoDataGridView();
+            CargarDatosProductoDataGridView();
+            //CargarDatosProductoSeleccionado();
+            //CargarProductosEnComboBox();
+            //CargarDatosUnidadMedidaSeleccionado();
+            //CargarUnidadesMedidaEnComboBoxProducto();
+        }
+        private void modificacionProductoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            lblOpcion5.Text = "Producto";
+            dgvOpcion.Rows.Clear();
+            lblOpcion1.Visible = true;
+            lblOpcion2.Visible = true;
+            lblOpcion3.Visible = true;
+            lblOpcion1.Text = "Descripcion";
+            lblOpcion2.Text = "Unidad de Medida";
+            lblOpcion3.Text = "Valor Unitario";
+            txtOpcion1.Visible = true;
+            txtOpcion2.Visible = false;
+            txtOpcion3.Visible = true;
+            btn_Agregar.Visible = false;
+            btn_Modificar.Visible = true;
+            btn_Eliminar.Visible = false;
+            chkHabilitado.Visible = true;
+            cboOpcion.Visible = true;
+            cboUnidadMedida.Visible = true;
+            ConfigurarColumnasProductoDataGridView();
+            CargarDatosProductoDataGridView();
+            CargarDatosUnidadMedidaSeleccionado();
+            CargarDatosProductoSeleccionado();
+            CargarUnidadesMedidaEnComboBoxProducto();
+            CargarUnidadesMedidaEnComboBox();
+            CargarProductosEnComboBox();
+            CargarDatosProductoSeleccionado();
+        }
+
+        private void eliminarProductoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            lblOpcion5.Text = "Producto";
+            dgvOpcion.Rows.Clear();
+            lblOpcion1.Visible = true;
+            lblOpcion2.Visible = false;
+            lblOpcion3.Visible = true;
+
+            lblOpcion1.Text = "Descripcion";
+            lblOpcion2.Text = "Unidad de Medida";
+            lblOpcion3.Text = "Valor Unitario";
+
+            txtOpcion1.Visible = true;
+            txtOpcion2.Visible = false;
+            txtOpcion3.Visible = true;
+            btn_Agregar.Visible = false;
+            btn_Modificar.Visible = false;
+            btn_Eliminar.Visible = true;
+            chkHabilitado.Visible = false;
+            cboUnidadMedida.Visible = false;
+            cboOpcion.Visible = true;
+            //ConfigurarColumnasProductoDataGridView();
+            CargarDatosProductoDataGridView();
+
+
+            //CargarUnidadesMedidaEnComboBox();
+            //CargarUnidadesMedidaEnComboBoxProducto();
+            //CargarDatosUnidadMedidaSeleccionado();
+            CargarDatosProductoSeleccionado();
+            CargarProductosEnComboBox();
         }
 
         private void ConfigurarColumnasTipoIvaDataGridView()
@@ -83,25 +276,23 @@ namespace TP_Final_Grupo1
             //cboOpcion.SelectedIndex = 0;
         }
 
-
         private void btn_Agregar_Click(object sender, EventArgs e)
-        {            
+        {
             if (lblOpcion5.Text == "AltaUnidadMedida")
             {
                 if (!string.IsNullOrEmpty(txtOpcion1.Text))
                 {
                     UnidadDeMedida unidadMedida = new UnidadDeMedida
                     {
-                        Descripcion= txtOpcion1.Text,
-                        Habilitado=chkHabilitado.Checked ? 1 : 0
+                        Descripcion = txtOpcion1.Text,
+                        Habilitado = chkHabilitado.Checked ? 1 : 0
                     };
 
                     unidadMedidaLogica.AgregarUnidadMedida(unidadMedida);
 
                     // Limpiar los campos después de agregar
                     LimpiarCampos();
-
-                    // recargar el ComboBox con la lista actualizada de tipos de IVA
+                    // recargar el ComboBox con la lista actualizada de tipos de IVA                  
                     CargarUnidadesMedidaEnComboBox();
                     ActualizarDataGridView();
                     return;
@@ -128,7 +319,6 @@ namespace TP_Final_Grupo1
 
                     // recargar el ComboBox con la lista actualizada de tipos de IVA
                     CargarTiposIvaEnComboBox();
-
                     ActualizarDataGridView();
                     return;
                 }
@@ -146,10 +336,10 @@ namespace TP_Final_Grupo1
                     Producto nuevoProducto = new Producto
                     {
                         Descripcion = txtOpcion1.Text,
-                        IdUnidadDeMedida = Convert.ToInt32(cboUnidadMedida.SelectedIndex),
-                        ValorUnitario = Convert.ToDouble(txtOpcion3.Text), 
+                        IdUnidadDeMedida = Convert.ToInt32(cboUnidadMedida.SelectedValue),
+                        ValorUnitario = Convert.ToDouble(txtOpcion3.Text),
                         Habilitado = chkHabilitado.Checked ? 1 : 0
-                };
+                    };
 
                     productoLogica.AgregarProducto(nuevoProducto);
 
@@ -158,79 +348,12 @@ namespace TP_Final_Grupo1
 
                     // recargar el ComboBox con la lista actualizada de productos
                     CargarProductosEnComboBox(); // Asegúrate de tener un método similar para cargar productos
-                    ActualizarDataGridView();
+                    CargarDatosProductoDataGridView();
                     return;
                 }
             }
 
         }
-
-        private void LimpiarCampos()
-        {
-            txtOpcion1.Text = "";
-            txtOpcion2.Text = "";
-            txtOpcion3.Text = "";
-        }
-            
-
-        private void ActualizarDataGridView()
-        {
-            // Limpiar las filas existentes en el DataGridView
-            
-            if (lblOpcion5.Text == "TipoIva")
-            {
-                dgvOpcion.Rows.Clear();
-                // Obtener la lista actualizada de tipos de IVA
-                List<TipoIva> tiposIva = tipoIvaLogica.ObtenerTiposIva();
-
-                // Iterar sobre la lista y agregar filas al DataGridView
-                foreach (TipoIva tipoIva in tiposIva)
-                {
-                    dgvOpcion.Rows.Add(tipoIva.Descripcion, tipoIva.Porcentaje, tipoIva.Habilitado == 1 ? "Sí" : "No");
-                }
-            }
-            else if (lblOpcion5.Text == "AltaUnidadMedida")
-            {
-                dgvOpcion.Rows.Clear();
-                // Obtener la lista actualizada de tipos de IVA
-                List<UnidadDeMedida> unidadmedidas = unidadMedidaLogica.ObtenerUnidadMedida();
-
-                // Iterar sobre la lista y agregar filas al DataGridView
-                foreach (UnidadDeMedida unidadmedida in unidadmedidas)
-                {
-                    dgvOpcion.Rows.Add(unidadmedida.Descripcion, unidadmedida.Habilitado == 1 ? "Sí" : "No");
-                }
-            }
-            else if (lblOpcion5.Text == "Producto")
-            {
-                dgvOpcion.Rows.Clear();
-                // Obtener la lista actualizada de tipos de IVA
-                List<Producto> productos = productoLogica.ObtenerProductos();
-
-                // Iterar sobre la lista y agregar filas al DataGridView
-                foreach (Producto prod in productos)
-                {
-                    dgvOpcion.Rows.Add(prod.Descripcion,prod.IdUnidadDeMedida,prod.ValorUnitario, prod.Habilitado == 1 ? "Sí" : "No");
-                }
-            }
-
-           
-        }
-
-        private void CargarDatosTipoIvaDataGridView()
-        {
-            List<TipoIva> tiposIva = tipoIvaLogica.ObtenerTiposIva();
-
-            // Configura las columnas para Tipo de IVA
-            ConfigurarColumnasTipoIvaDataGridView();
-
-            // Itera sobre la lista de tipos de IVA y agrega una fila por cada uno al DataGridView
-            foreach (TipoIva tipoIva in tiposIva)
-            {
-                dgvOpcion.Rows.Add(tipoIva.Descripcion, tipoIva.Porcentaje, tipoIva.Habilitado == 1 ? "Sí" : "No");
-            }
-        }
-
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
             try
@@ -239,10 +362,8 @@ namespace TP_Final_Grupo1
                 {
                     // Obtén los datos del formulario 
                     TipoIva tipoIva = ObtenerDatosDelFormulario();
-
                     // Llama al método de la capa de lógica para editar el tipo de IVA
                     bool resultado = tipoIvaLogica.EditarTipoIva(tipoIva);
-
                     // Puedes manejar el resultado de acuerdo a tus necesidades (mostrar mensajes, actualizar UI, etc.)
                     if (resultado)
                     {
@@ -250,6 +371,7 @@ namespace TP_Final_Grupo1
                         LimpiarCampos();
                         CargarDatosTipoIvaDataGridView();
                         CargarDatosTipoIvaSeleccionado();
+                        CargarTiposIvaEnComboBox();
                         ActualizarDataGridView();
                         //vuelvo a la opcion Selecionar del ComboBox
                         cboOpcion.SelectedIndex = 0;
@@ -273,9 +395,12 @@ namespace TP_Final_Grupo1
                     // Puedes manejar el resultado de acuerdo a tus necesidades (mostrar mensajes, actualizar UI, etc.)
                     if (resultado)
                     {
-                        MessageBox.Show("Tipo de IVA editado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Unidad de Medida editado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();
                         CargarDatosUnidadDeMedidaDataGridView();
+                        CargarDatosUnidadMedidaSeleccionado();
+                        CargarUnidadesMedidaEnComboBox();
+                        ActualizarDataGridView();
                         //vuelvo a la opcion Selecionar del ComboBox
                         cboOpcion.SelectedIndex = 0;
                         return;
@@ -287,6 +412,34 @@ namespace TP_Final_Grupo1
                     }
                 }
 
+                if (lblOpcion5.Text == "Producto")
+                {
+                    // Obtén los datos del formulario o de donde sea necesario
+                    Producto producto = ObtenerDatosDelFormularioProducto();
+
+                    // Llama al método de la capa de lógica para editar el tipo de IVA
+                    bool resultado = productoLogica.EditarProducto(producto);
+
+                    // Puedes manejar el resultado de acuerdo a tus necesidades (mostrar mensajes, actualizar UI, etc.)
+                    if (resultado)
+                    {
+                        MessageBox.Show("Producto editado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimpiarCampos();
+                        CargarDatosProductoDataGridView();
+                        CargarDatosProductoSeleccionado();
+                        CargarProductosEnComboBox();
+                        
+                        //vuelvo a la opcion Selecionar del ComboBox
+                        cboOpcion.SelectedIndex = 0;
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al editar el Producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                }
+
             }
             catch (Exception ex)
             {
@@ -294,109 +447,6 @@ namespace TP_Final_Grupo1
                 MessageBox.Show($"Error: Debe seleccionar un elemento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void CargarProductosEnComboBox()
-        {
-            List<Producto> productos = productoLogica.ObtenerProductos();
-
-            // Agrego un elemento vacío al principio de la lista
-            productos.Insert(0, new Producto { IdProducto = 0, Descripcion = "Seleccionar" });
-
-            // Asigna la lista de productos al ComboBox
-            cboOpcion.DataSource = productos;
-            cboOpcion.DisplayMember = "Descripcion"; // Muestro la descripción en el ComboBox
-            cboOpcion.ValueMember = "IdProducto"; // Uso el IdProducto como valor seleccionado
-
-            cboOpcion.SelectedIndex = 0; // Selecciona el elemento vacío por defecto
-        }
-
-        private TipoIva ObtenerDatosDelFormulario()
-        {
-            // Creo un objeto TipoIva y asigno los valores
-            if (cboOpcion.SelectedItem != null && cboOpcion.SelectedItem is TipoIva tipoIvaSeleccionado)
-            {
-                // Utiliza los datos del objeto seleccionado en el ComboBox
-                tipoIvaSeleccionado.Descripcion = txtOpcion1.Text;
-                tipoIvaSeleccionado.Porcentaje = Convert.ToDouble(txtOpcion2.Text);
-                tipoIvaSeleccionado.Habilitado = chkHabilitado.Checked ? 1 : 0;
-
-                return tipoIvaSeleccionado;
-            }
-
-            return null;
-        }
-        private UnidadDeMedida ObtenerDatosDelFormularioUnidadMedida()
-        {
-            // Creo un objeto TipoIva y asigno los valores
-            if (cboOpcion.SelectedItem != null && cboOpcion.SelectedItem is UnidadDeMedida tipoIvaSeleccionado)
-            {
-                // Utiliza los datos del objeto seleccionado en el ComboBox
-                tipoIvaSeleccionado.Descripcion = txtOpcion1.Text;
-                tipoIvaSeleccionado.Habilitado = chkHabilitado.Checked ? 1 : 0;
-
-                return tipoIvaSeleccionado;
-            }
-
-            return null;
-        }
-
-        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LimpiarCampos();
-            dgvOpcion.Rows.Clear();
-            lblOpcion1.Visible = true;
-            lblOpcion2.Visible = true;
-            lblOpcion5.Text = "TipoIva";
-            lblOpcion1.Text = "Descripcion";
-            lblOpcion2.Text = "Porcentaje";
-            txtOpcion1.Visible = true;
-            txtOpcion2.Visible = true;
-            btn_Agregar.Visible = false;
-            btn_Eliminar.Visible = false;
-            btn_Modificar.Visible = true;
-            chkHabilitado.Visible = true;
-
-            
-            ConfigurarColumnasTipoIvaDataGridView();
-            CargarDatosTipoIvaDataGridView();
-        }
-
-        private void CargarDatosTipoIvaSeleccionado()
-        {
-            // Verifico si hay un elemento seleccionado en el ComboBox
-            if (cboOpcion.SelectedItem != null && cboOpcion.SelectedItem is TipoIva tipoIvaSeleccionado) 
-            {
-                // Verifico si no es el elemento inicial ("Seleccionar")
-                if (tipoIvaSeleccionado.IdTipoIva != 0)
-                {
-                    // Cargo los datos del tipoIvaSeleccionado 
-                    txtOpcion1.Text = tipoIvaSeleccionado.Descripcion;
-                    txtOpcion2.Text = tipoIvaSeleccionado.Porcentaje.ToString();
-                    chkHabilitado.Checked = tipoIvaSeleccionado.Habilitado == 1;
-                }
-                else
-                {
-                    // Si es el elemento Seleccionar dejo los txtBox vacios
-                    txtOpcion1.Text = "";
-                    txtOpcion2.Text = "";
-                    chkHabilitado.Checked = false;
-                }
-            }
-        }
-
-        private void cboOpcion_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lblOpcion5.Text == "AltaUnidadMedida")
-            {
-                CargarDatosUnidadMedidaSeleccionado();
-            }
-            else if (lblOpcion5.Text == "TipoIva")
-            {
-                CargarDatosTipoIvaSeleccionado();
-            }
-                   
-        }
-
         private void btn_Eliminar_Click(object sender, EventArgs e)
         {
             if (lblOpcion5.Text == "TipoIva")
@@ -449,7 +499,36 @@ namespace TP_Final_Grupo1
                     }
                     else
                     {
-                        MessageBox.Show("Error al eliminar el tipo de IVA.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se puede eliminar la unidad de medida porque tiene productos asociados.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+            }
+
+            if (lblOpcion5.Text == "Producto")
+            {
+                // Obtén el IdTipoIva del elemento seleccionado en el ComboBox o DataGridView
+                if (cboOpcion.SelectedItem != null && cboOpcion.SelectedItem is Producto tipoIvaSeleccionado)
+                {
+                    int idProducto = tipoIvaSeleccionado.IdProducto;
+
+                    // Llama al método de la capa de lógica para eliminar el tipo de IVA
+                    bool resultado = productoLogica.EliminarProducto(idProducto);
+
+                    // Puedes manejar el resultado de acuerdo a tus necesidades (mostrar mensajes, actualizar UI, etc.)
+                    if (resultado)
+                    {
+                        MessageBox.Show("Producto eliminado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Actualiza el ComboBox y/o DataGridView después de la eliminación
+                        CargarProductosEnComboBox();
+                        CargarDatosProductoDataGridView();
+                        ActualizarDataGridView();
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al eliminar el Producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
@@ -458,47 +537,175 @@ namespace TP_Final_Grupo1
 
         }
 
-        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void LimpiarCampos()
         {
-            LimpiarCampos();
-            dgvOpcion.Rows.Clear();
-            lblOpcion1.Visible = true;
-            lblOpcion2.Visible = true;
-            lblOpcion5.Text = "TipoIva";
             txtOpcion1.Text = "";
             txtOpcion2.Text = "";
-            lblOpcion1.Text = "Descripcion";
-            lblOpcion2.Text = "Porcentaje";
-            txtOpcion1.Visible = true;
-            txtOpcion2.Visible = true;
-            btn_Agregar.Visible = false;
-            btn_Modificar.Visible = false;
-            btn_Eliminar.Visible = true;
-            chkHabilitado.Visible = true;
-            
-            ConfigurarColumnasTipoIvaDataGridView();
-            CargarDatosTipoIvaDataGridView();
-            CargarTiposIvaEnComboBox();
+            txtOpcion3.Text = "";
         }
 
-        private void altaUnidadDeMedidaToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void ActualizarDataGridView()
+        {            
+            if (lblOpcion5.Text == "TipoIva")
+            {
+                dgvOpcion.Rows.Clear();
+                // Obtener la lista actualizada de tipos de IVA
+                List<TipoIva> tiposIva = tipoIvaLogica.ObtenerTiposIva();
+
+                // Iterar sobre la lista y agregar filas al DataGridView
+                foreach (TipoIva tipoIva in tiposIva)
+                {
+                    dgvOpcion.Rows.Add(tipoIva.Descripcion, tipoIva.Porcentaje, tipoIva.Habilitado == 1 ? "Sí" : "No");
+                }
+            }
+            else if (lblOpcion5.Text == "AltaUnidadMedida")
+            {
+                dgvOpcion.Rows.Clear();
+                // Obtener la lista actualizada de tipos de IVA
+                List<UnidadDeMedida> unidadmedidas = unidadMedidaLogica.ObtenerUnidadMedida();
+
+                // Iterar sobre la lista y agregar filas al DataGridView
+                foreach (UnidadDeMedida unidadmedida in unidadmedidas)
+                {
+                    dgvOpcion.Rows.Add(unidadmedida.Descripcion, unidadmedida.Habilitado == 1 ? "Sí" : "No");
+                }
+            }
+            else if (lblOpcion5.Text == "Producto")
+            {
+                dgvOpcion.Rows.Clear();
+                // Obtener la lista actualizada de tipos de IVA
+                List<Producto> productos = productoLogica.ObtenerProductos();
+
+                // Iterar sobre la lista y agregar filas al DataGridView
+                foreach (Producto prod in productos)
+                {
+                    dgvOpcion.Rows.Add(prod.Descripcion, prod.IdUnidadDeMedida, prod.ValorUnitario, prod.Habilitado == 1 ? "Sí" : "No");
+                }
+            }
+
+
+        }
+
+        private void CargarDatosTipoIvaDataGridView()
         {
-            LimpiarCampos();
-            dgvOpcion.Rows.Clear();
-            lblOpcion1.Visible = true;
-            lblOpcion2.Visible = false;
-            lblOpcion5.Text = "AltaUnidadMedida";
-            txtOpcion1.Text = "";
-            lblOpcion1.Text = "Descripcion";
-            txtOpcion1.Visible = true;
-            btn_Agregar.Visible = true;
-            btn_Modificar.Visible = false;
-            btn_Eliminar.Visible = false;
-            chkHabilitado.Visible = true;
-            ConfigurarColumnasUnidadDeMedidaDataGridView();
-            CargarDatosUnidadDeMedidaDataGridView();
-            CargarDatosUnidadMedidaSeleccionado();
-            CargarUnidadesMedidaEnComboBox();
+            List<TipoIva> tiposIva = tipoIvaLogica.ObtenerTiposIva();
+
+            // Configura las columnas para Tipo de IVA
+            ConfigurarColumnasTipoIvaDataGridView();
+
+            // Itera sobre la lista de tipos de IVA y agrega una fila por cada uno al DataGridView
+            foreach (TipoIva tipoIva in tiposIva)
+            {
+                dgvOpcion.Rows.Add(tipoIva.Descripcion, tipoIva.Porcentaje, tipoIva.Habilitado == 1 ? "Sí" : "No");
+            }
+        }
+      
+        private void CargarProductosEnComboBox()
+        {
+            List<Producto> productos = productoLogica.ObtenerProductos();
+
+            // Agrego un elemento vacío al principio de la lista
+            productos.Insert(0, new Producto { IdProducto = 0, Descripcion = "Seleccionar" });
+
+            // Asigna la lista de productos al ComboBox
+            cboOpcion.DataSource = productos;
+            cboOpcion.DisplayMember = "Descripcion"; // Muestro la descripción en el ComboBox
+            cboOpcion.ValueMember = "IdProducto"; // Uso el IdProducto como valor seleccionado
+
+            cboOpcion.SelectedIndex = 0; // Selecciona el elemento vacío por defecto
+        }
+
+        private TipoIva ObtenerDatosDelFormulario()
+        {
+            // Creo un objeto TipoIva y asigno los valores
+            if (cboOpcion.SelectedItem != null && cboOpcion.SelectedItem is TipoIva tipoIvaSeleccionado)
+            {
+                // Utiliza los datos del objeto seleccionado en el ComboBox
+                tipoIvaSeleccionado.Descripcion = txtOpcion1.Text;
+                tipoIvaSeleccionado.Porcentaje = Convert.ToDouble(txtOpcion2.Text);
+                tipoIvaSeleccionado.Habilitado = chkHabilitado.Checked ? 1 : 0;
+
+                return tipoIvaSeleccionado;
+            }
+
+            return null;
+        }
+        private UnidadDeMedida ObtenerDatosDelFormularioUnidadMedida()
+        {
+            // Creo un objeto TipoIva y asigno los valores
+            if (cboOpcion.SelectedItem != null && cboOpcion.SelectedItem is UnidadDeMedida tipoIvaSeleccionado)
+            {
+                // Utiliza los datos del objeto seleccionado en el ComboBox
+                tipoIvaSeleccionado.Descripcion = txtOpcion1.Text;
+                tipoIvaSeleccionado.Habilitado = chkHabilitado.Checked ? 1 : 0;
+
+                return tipoIvaSeleccionado;
+            }
+
+            return null;
+        }
+
+        private Producto ObtenerDatosDelFormularioProducto()
+        {
+            // Creo un objeto Producto y asigno los valores
+            if (cboOpcion.SelectedItem != null && cboOpcion.SelectedItem is Producto productoSeleccionado)
+            {
+                // Utiliza los datos del objeto seleccionado en el ComboBox
+                productoSeleccionado.Descripcion = txtOpcion1.Text;
+                productoSeleccionado.ValorUnitario = double.Parse(txtOpcion3.Text);
+
+                // Obtén el objeto UnidadDeMedida seleccionado en el ComboBox
+                if (cboUnidadMedida.SelectedItem is UnidadDeMedida unidadMedidaSeleccionada)
+                {
+                    productoSeleccionado.IdUnidadDeMedida = unidadMedidaSeleccionada.IdUnidadDeMedida;
+                }
+
+                productoSeleccionado.Habilitado = chkHabilitado.Checked ? 1 : 0;
+
+                return productoSeleccionado;
+            }
+
+            return null;
+        }      
+
+        private void CargarDatosTipoIvaSeleccionado()
+        {
+            // Verifico si hay un elemento seleccionado en el ComboBox
+            if (cboOpcion.SelectedItem != null && cboOpcion.SelectedItem is TipoIva tipoIvaSeleccionado)
+            {
+                // Verifico si no es el elemento inicial ("Seleccionar")
+                if (tipoIvaSeleccionado.IdTipoIva != 0)
+                {
+                    // Cargo los datos del tipoIvaSeleccionado 
+                    txtOpcion1.Text = tipoIvaSeleccionado.Descripcion;
+                    txtOpcion2.Text = tipoIvaSeleccionado.Porcentaje.ToString();
+                    chkHabilitado.Checked = tipoIvaSeleccionado.Habilitado == 1;
+                }
+                else
+                {
+                    // Si es el elemento Seleccionar dejo los txtBox vacios
+                    txtOpcion1.Text = "";
+                    txtOpcion2.Text = "";
+                    chkHabilitado.Checked = false;
+                }
+            }
+        }
+
+        private void cboOpcion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lblOpcion5.Text == "AltaUnidadMedida")
+            {
+                CargarDatosUnidadMedidaSeleccionado();
+            }
+            else if (lblOpcion5.Text == "TipoIva")
+            {
+                CargarDatosTipoIvaSeleccionado();
+            }
+            else if (lblOpcion5.Text == "Producto")
+            {
+                CargarDatosProductoSeleccionado();
+            }
+
         }
 
         private void ConfigurarColumnasUnidadDeMedidaDataGridView()
@@ -519,42 +726,6 @@ namespace TP_Final_Grupo1
             {
                 dgvOpcion.Rows.Add(unidadMedida.Descripcion, unidadMedida.Habilitado == 1 ? "Sí" : "No");
             }
-        }
-
-        private void modificacionUnidadDeMedidaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LimpiarCampos();
-            dgvOpcion.Rows.Clear();
-            lblOpcion1.Visible = true;
-            lblOpcion5.Text = "AltaUnidadMedida";
-            lblOpcion1.Text = "Descripcion";
-            txtOpcion1.Visible = true;
-            btn_Agregar.Visible = false;
-            btn_Modificar.Visible = true;
-            btn_Eliminar.Visible = false;
-            chkHabilitado.Visible = true;
-            ConfigurarColumnasUnidadDeMedidaDataGridView();
-            CargarDatosUnidadDeMedidaDataGridView();
-            CargarDatosUnidadMedidaSeleccionado();
-            CargarUnidadesMedidaEnComboBox();
-        }
-
-        private void eliminarUnidadDeMedidaToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            LimpiarCampos();
-            dgvOpcion.Rows.Clear();
-            lblOpcion1.Visible = true;
-            lblOpcion1.Text = "Descripcion";
-            txtOpcion1.Visible = true;
-            txtOpcion2.Visible = false;
-            btn_Agregar.Visible = false;
-            btn_Modificar.Visible = false;
-            btn_Eliminar.Visible = true;
-            chkHabilitado.Visible = true;
-            ConfigurarColumnasUnidadDeMedidaDataGridView();
-            CargarDatosUnidadDeMedidaDataGridView();
-            CargarDatosUnidadMedidaSeleccionado();
-            CargarUnidadesMedidaEnComboBox();
         }
 
         private void CargarDatosUnidadMedidaSeleccionado()
@@ -592,9 +763,6 @@ namespace TP_Final_Grupo1
 
             //cboOpcion.SelectedIndex = 0;
         }
-
-        
-
         private void ConfigurarColumnasProductoDataGridView()
         {
             dgvOpcion.Columns.Clear(); // Limpiar las columnas existentes
@@ -612,7 +780,8 @@ namespace TP_Final_Grupo1
             // Itera sobre la lista de productos y agrega una fila por cada uno al DataGridView
             foreach (Producto producto in productos)
             {
-                dgvOpcion.Rows.Add(producto.Descripcion, producto.IdUnidadDeMedida, producto.ValorUnitario, producto.Habilitado == 1 ? "Sí" : "No");
+                string descripcionUnidadMedida = unidadMedidaLogica.ObtenerDescripcionUnidadMedida(producto.IdUnidadDeMedida);
+                dgvOpcion.Rows.Add(producto.Descripcion, descripcionUnidadMedida, producto.ValorUnitario, producto.Habilitado == 1 ? "Sí" : "No");
             }
         }
         private void CargarDatosProductoSeleccionado()
@@ -625,55 +794,24 @@ namespace TP_Final_Grupo1
                 {
                     // Cargo los datos del producto seleccionado 
                     txtOpcion1.Text = producto.Descripcion;
-                    txtOpcion2.Text = producto.IdUnidadDeMedida.ToString(); // Ajusta según tus necesidades
-                    txtOpcion3.Text = producto.ValorUnitario.ToString(); // Ajusta según tus necesidades
-                    chkHabilitado.Checked = (producto.Habilitado == 1);
+                    txtOpcion2.Text = producto.IdUnidadDeMedida.ToString();
+                    txtOpcion3.Text = producto.ValorUnitario.ToString();
+                    chkHabilitado.Checked = producto.Habilitado == 1;
                 }
                 else
                 {
                     // Si es el elemento Seleccionar, dejo los campos vacíos
-                    LimpiarCampos();
+                    txtOpcion1.Text = "";
+                    txtOpcion2.Text = "";
+                    txtOpcion3.Text = "";
+                    chkHabilitado.Checked = false;
                 }
             }
-        }
-
-        private void altaProductoToolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            //Alta
-            LimpiarCampos();
-            lblOpcion5.Text = "Producto";
-            dgvOpcion.Rows.Clear();
-            lblOpcion1.Visible = true;
-            lblOpcion2.Visible = true;
-            lblOpcion3.Visible = true;
-            
-            lblOpcion1.Text = "Descripcion";
-            lblOpcion2.Text = "Unidad de Medida";
-            lblOpcion3.Text = "Valor Unitario";
-
-            txtOpcion1.Visible = true;
-            txtOpcion2.Visible = false;
-            txtOpcion3.Visible = true;
-            btn_Agregar.Visible = true;
-            btn_Modificar.Visible = false;
-            btn_Eliminar.Visible = false;
-            chkHabilitado.Visible = true;
-            cboUnidadMedida.Visible = true;
-            ConfigurarColumnasProductoDataGridView();
-            CargarDatosProductoDataGridView();
-            CargarDatosProductoSeleccionado();
-            CargarUnidadesMedidaEnComboBox();
-            CargarProductosEnComboBox();
-            CargarDatosUnidadMedidaSeleccionado();
-            CargarUnidadesMedidaEnComboBox();
-            CargarUnidadesMedidaEnComboBoxProducto();
-        }
-
+        }       
         private void cboUnidadMedida_SelectedIndexChanged(object sender, EventArgs e)
         {
             CargarDatosUnidadMedidaSeleccionado();
         }
-
         private void CargarUnidadesMedidaEnComboBoxProducto()
         {
             List<UnidadDeMedida> unidadesMedidas = unidadMedidaLogica.ObtenerUnidadMedida();
@@ -688,8 +826,9 @@ namespace TP_Final_Grupo1
 
             //cboOpcion.SelectedIndex = 0;
         }
+        
     }
 
 
-   
+
 }

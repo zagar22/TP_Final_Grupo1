@@ -88,5 +88,41 @@ namespace Datos
                 return rowsAffected > 0;
             }
         }
+
+        public string ObtenerDescripcionUnidadMedida(int idUnidadMedida)
+        {
+            using (MySqlConnection connection = conexionMysql.GetConexion())
+            {
+                string query = "SELECT Descripcion FROM unidaddemedida WHERE idUnidadDeMedida = @idUnidadDeMedida";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@idUnidadDeMedida", idUnidadMedida);
+
+                   
+
+                    object result = cmd.ExecuteScalar();
+
+                    return result != null ? result.ToString() : string.Empty;
+                }
+            }
+        }
+
+        public bool TieneProductosAsociados(int idUnidadMedida)
+        {
+            MySqlConnection connection = conexionMysql.GetConexion();
+            string query = "SELECT COUNT(*) FROM producto WHERE IdUnidadDeMedida = @idUnidadDeMedida";
+
+            using (MySqlCommand cmd = new MySqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@idUnidadDeMedida", idUnidadMedida);
+
+                
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                connection.Close();
+
+                return count > 0;
+            }
+        }
     }
 }
