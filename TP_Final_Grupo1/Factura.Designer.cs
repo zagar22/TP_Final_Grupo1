@@ -404,7 +404,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Aquamarine;
+            this.BackColor = System.Drawing.Color.MintCream;
             this.ClientSize = new System.Drawing.Size(628, 881);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
