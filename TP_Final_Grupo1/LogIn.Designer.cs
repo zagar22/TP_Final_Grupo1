@@ -53,8 +53,9 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 430);
+            this.panel1.Size = new System.Drawing.Size(150, 349);
             this.panel1.TabIndex = 8;
             // 
             // button1
@@ -65,9 +66,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(576, 22);
+            this.button1.Location = new System.Drawing.Point(432, 18);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(29, 28);
+            this.button1.Size = new System.Drawing.Size(22, 23);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -75,9 +77,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.DarkCyan;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, 114);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 93);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 148);
+            this.pictureBox1.Size = new System.Drawing.Size(110, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -95,10 +98,10 @@
             this.txt_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Usuario.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Usuario.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_Usuario.Location = new System.Drawing.Point(346, 135);
-            this.txt_Usuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Usuario.Location = new System.Drawing.Point(260, 110);
+            this.txt_Usuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_Usuario.Name = "txt_Usuario";
-            this.txt_Usuario.Size = new System.Drawing.Size(400, 24);
+            this.txt_Usuario.Size = new System.Drawing.Size(300, 19);
             this.txt_Usuario.TabIndex = 2;
             // 
             // txt_Contrasenia
@@ -107,10 +110,10 @@
             this.txt_Contrasenia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Contrasenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Contrasenia.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_Contrasenia.Location = new System.Drawing.Point(345, 187);
-            this.txt_Contrasenia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_Contrasenia.Location = new System.Drawing.Point(259, 152);
+            this.txt_Contrasenia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_Contrasenia.Name = "txt_Contrasenia";
-            this.txt_Contrasenia.Size = new System.Drawing.Size(400, 20);
+            this.txt_Contrasenia.Size = new System.Drawing.Size(300, 16);
             this.txt_Contrasenia.TabIndex = 3;
             this.txt_Contrasenia.UseSystemPasswordChar = true;
             // 
@@ -123,10 +126,10 @@
             this.btn_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Aceptar.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Aceptar.ForeColor = System.Drawing.Color.DimGray;
-            this.btn_Aceptar.Location = new System.Drawing.Point(350, 323);
-            this.btn_Aceptar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Aceptar.Location = new System.Drawing.Point(262, 262);
+            this.btn_Aceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Aceptar.Name = "btn_Aceptar";
-            this.btn_Aceptar.Size = new System.Drawing.Size(400, 40);
+            this.btn_Aceptar.Size = new System.Drawing.Size(300, 32);
             this.btn_Aceptar.TabIndex = 4;
             this.btn_Aceptar.Text = "ACCEDER";
             this.btn_Aceptar.UseVisualStyleBackColor = false;
@@ -138,37 +141,50 @@
             this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancelar.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancelar.Image = ((System.Drawing.Image)(resources.GetObject("btn_Cancelar.Image")));
-            this.btn_Cancelar.Location = new System.Drawing.Point(834, 2);
-            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 0);
+            this.btn_Cancelar.Location = new System.Drawing.Point(626, 2);
+            this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 0);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(34, 35);
+            this.btn_Cancelar.Size = new System.Drawing.Size(26, 28);
             this.btn_Cancelar.TabIndex = 6;
             this.btn_Cancelar.UseVisualStyleBackColor = false;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // checkBox1
             // 
+            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.checkBox1.FlatAppearance.BorderSize = 2;
+            this.checkBox1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Lime;
             this.checkBox1.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.checkBox1.Location = new System.Drawing.Point(674, 222);
+            this.checkBox1.Location = new System.Drawing.Point(504, 201);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(78, 22);
+            this.checkBox1.Size = new System.Drawing.Size(55, 25);
             this.checkBox1.TabIndex = 11;
             this.checkBox1.Text = "Mostrar";
+            this.checkBox1.UseCompatibleTextRendering = true;
             this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.checkBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(871, 430);
+            this.panel2.Size = new System.Drawing.Size(653, 349);
             this.panel2.TabIndex = 12;
             // 
             // button3
@@ -176,10 +192,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.DimGray;
-            this.button3.Location = new System.Drawing.Point(346, 162);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(260, 132);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(400, 2);
+            this.button3.Size = new System.Drawing.Size(300, 2);
             this.button3.TabIndex = 6;
             this.button3.UseVisualStyleBackColor = true;
             // 
@@ -188,10 +204,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.DimGray;
-            this.button2.Location = new System.Drawing.Point(345, 210);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(259, 171);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(400, 2);
+            this.button2.Size = new System.Drawing.Size(300, 2);
             this.button2.TabIndex = 5;
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -201,21 +217,21 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(469, 20);
+            this.label1.Location = new System.Drawing.Point(352, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 46);
+            this.label1.Size = new System.Drawing.Size(109, 38);
             this.label1.TabIndex = 2;
             this.label1.Text = "LOGIN";
             // 
             // frm_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.ClientSize = new System.Drawing.Size(871, 430);
+            this.ClientSize = new System.Drawing.Size(653, 349);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Aceptar);
             this.Controls.Add(this.txt_Contrasenia);
@@ -223,7 +239,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
