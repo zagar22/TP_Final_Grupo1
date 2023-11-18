@@ -136,7 +136,7 @@ namespace TP_Final_Grupo1
 
             foreach (var producto in productos)
             {
-                string habilitado = producto.Habilitado ? "Si" : "No";
+                string habilitado = producto.Habilitado == 1 ? "Si" : "No";
                 dataGridView.Rows.Add(producto.Descripcion, producto.IdUnidadDeMedida, producto.ValorUnitario, habilitado);
             }
 

@@ -38,9 +38,9 @@
             this.modificacionUnidadDeMedidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarUnidadDeMedidaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.productoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.altaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificacionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.altaProductoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificacionProductoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarProductoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.altaToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.modificacionToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,6 +61,7 @@
             this.btn_Modificar = new System.Windows.Forms.Button();
             this.btn_Eliminar = new System.Windows.Forms.Button();
             this.chkHabilitado = new System.Windows.Forms.CheckBox();
+            this.cboUnidadMedida = new System.Windows.Forms.ComboBox();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOpcion)).BeginInit();
             this.SuspendLayout();
@@ -124,51 +125,52 @@
             // altaUnidadDeMedidaToolStripMenuItem1
             // 
             this.altaUnidadDeMedidaToolStripMenuItem1.Name = "altaUnidadDeMedidaToolStripMenuItem1";
-            this.altaUnidadDeMedidaToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.altaUnidadDeMedidaToolStripMenuItem1.Size = new System.Drawing.Size(179, 26);
             this.altaUnidadDeMedidaToolStripMenuItem1.Text = "Alta";
             this.altaUnidadDeMedidaToolStripMenuItem1.Click += new System.EventHandler(this.altaUnidadDeMedidaToolStripMenuItem1_Click);
             // 
             // modificacionUnidadDeMedidaToolStripMenuItem
             // 
             this.modificacionUnidadDeMedidaToolStripMenuItem.Name = "modificacionUnidadDeMedidaToolStripMenuItem";
-            this.modificacionUnidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.modificacionUnidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.modificacionUnidadDeMedidaToolStripMenuItem.Text = "Modificacion";
             this.modificacionUnidadDeMedidaToolStripMenuItem.Click += new System.EventHandler(this.modificacionUnidadDeMedidaToolStripMenuItem_Click);
             // 
             // eliminarUnidadDeMedidaToolStripMenuItem1
             // 
             this.eliminarUnidadDeMedidaToolStripMenuItem1.Name = "eliminarUnidadDeMedidaToolStripMenuItem1";
-            this.eliminarUnidadDeMedidaToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.eliminarUnidadDeMedidaToolStripMenuItem1.Size = new System.Drawing.Size(179, 26);
             this.eliminarUnidadDeMedidaToolStripMenuItem1.Text = "Eliminar";
             this.eliminarUnidadDeMedidaToolStripMenuItem1.Click += new System.EventHandler(this.eliminarUnidadDeMedidaToolStripMenuItem1_Click);
             // 
             // productoToolStripMenuItem
             // 
             this.productoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.altaToolStripMenuItem2,
-            this.modificacionToolStripMenuItem1,
-            this.eliminarToolStripMenuItem2});
+            this.altaProductoToolStripMenuItem2,
+            this.modificacionProductoToolStripMenuItem1,
+            this.eliminarProductoToolStripMenuItem2});
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
             this.productoToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.productoToolStripMenuItem.Text = "Producto";
             // 
-            // altaToolStripMenuItem2
+            // altaProductoToolStripMenuItem2
             // 
-            this.altaToolStripMenuItem2.Name = "altaToolStripMenuItem2";
-            this.altaToolStripMenuItem2.Size = new System.Drawing.Size(179, 26);
-            this.altaToolStripMenuItem2.Text = "Alta";
+            this.altaProductoToolStripMenuItem2.Name = "altaProductoToolStripMenuItem2";
+            this.altaProductoToolStripMenuItem2.Size = new System.Drawing.Size(179, 26);
+            this.altaProductoToolStripMenuItem2.Text = "Alta";
+            this.altaProductoToolStripMenuItem2.Click += new System.EventHandler(this.altaProductoToolStripMenuItem2_Click);
             // 
-            // modificacionToolStripMenuItem1
+            // modificacionProductoToolStripMenuItem1
             // 
-            this.modificacionToolStripMenuItem1.Name = "modificacionToolStripMenuItem1";
-            this.modificacionToolStripMenuItem1.Size = new System.Drawing.Size(179, 26);
-            this.modificacionToolStripMenuItem1.Text = "Modificacion";
+            this.modificacionProductoToolStripMenuItem1.Name = "modificacionProductoToolStripMenuItem1";
+            this.modificacionProductoToolStripMenuItem1.Size = new System.Drawing.Size(179, 26);
+            this.modificacionProductoToolStripMenuItem1.Text = "Modificacion";
             // 
-            // eliminarToolStripMenuItem2
+            // eliminarProductoToolStripMenuItem2
             // 
-            this.eliminarToolStripMenuItem2.Name = "eliminarToolStripMenuItem2";
-            this.eliminarToolStripMenuItem2.Size = new System.Drawing.Size(179, 26);
-            this.eliminarToolStripMenuItem2.Text = "Eliminar";
+            this.eliminarProductoToolStripMenuItem2.Name = "eliminarProductoToolStripMenuItem2";
+            this.eliminarProductoToolStripMenuItem2.Size = new System.Drawing.Size(179, 26);
+            this.eliminarProductoToolStripMenuItem2.Text = "Eliminar";
             // 
             // clientesToolStripMenuItem
             // 
@@ -353,7 +355,7 @@
             // chkHabilitado
             // 
             this.chkHabilitado.AutoSize = true;
-            this.chkHabilitado.Location = new System.Drawing.Point(507, 331);
+            this.chkHabilitado.Location = new System.Drawing.Point(505, 294);
             this.chkHabilitado.Name = "chkHabilitado";
             this.chkHabilitado.Size = new System.Drawing.Size(91, 20);
             this.chkHabilitado.TabIndex = 17;
@@ -361,11 +363,22 @@
             this.chkHabilitado.UseVisualStyleBackColor = true;
             this.chkHabilitado.Visible = false;
             // 
+            // cboUnidadMedida
+            // 
+            this.cboUnidadMedida.FormattingEnabled = true;
+            this.cboUnidadMedida.Location = new System.Drawing.Point(240, 326);
+            this.cboUnidadMedida.Name = "cboUnidadMedida";
+            this.cboUnidadMedida.Size = new System.Drawing.Size(240, 24);
+            this.cboUnidadMedida.TabIndex = 18;
+            this.cboUnidadMedida.Visible = false;
+            this.cboUnidadMedida.SelectedIndexChanged += new System.EventHandler(this.cboUnidadMedida_SelectedIndexChanged);
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 537);
+            this.Controls.Add(this.cboUnidadMedida);
             this.Controls.Add(this.chkHabilitado);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.btn_Modificar);
@@ -421,12 +434,13 @@
         private System.Windows.Forms.ToolStripMenuItem altaUnidadDeMedidaToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem modificacionUnidadDeMedidaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarUnidadDeMedidaToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem altaToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem modificacionToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem altaProductoToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem modificacionProductoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem eliminarProductoToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem altaToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem modificacionToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem eliminarToolStripMenuItem3;
         private System.Windows.Forms.CheckBox chkHabilitado;
+        private System.Windows.Forms.ComboBox cboUnidadMedida;
     }
 }

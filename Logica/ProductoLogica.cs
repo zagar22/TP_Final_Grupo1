@@ -17,5 +17,25 @@ namespace Logica
         {
             return productoConsulta.BuscarPorDescripcion(descripcion);
         }
+
+        public List<Producto> ObtenerProductos()
+        {
+            return productoConsulta.ObtenerProductos();
+        }
+
+        public void AgregarProducto(Producto nuevoProducto)
+        {
+            productoConsulta.AgregarProducto(nuevoProducto);
+        }
+
+        public bool EditarProducto(Producto producto)
+        {
+            return productoConsulta.EditarProducto(producto);
+        }
+
+        public bool EliminarProducto(int idProducto)
+        {
+            return productoConsulta.EliminarProducto(idProducto);
+        }
     }
 }
