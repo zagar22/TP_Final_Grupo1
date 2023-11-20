@@ -150,6 +150,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Vendedor.resx">
       <DependentUpon>Vendedor.cs</DependentUpon>
@@ -181,6 +182,33 @@
       <Project>{d0a8ae55-7794-4f84-b79d-05817f945fca}</Project>
       <Name>Logica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoCliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoCliente1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoConsulta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoProducto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoPorcentaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icoUniMed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
