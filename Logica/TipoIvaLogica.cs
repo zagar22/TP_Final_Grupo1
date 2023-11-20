@@ -32,5 +32,10 @@ namespace Logica
         {
             return tipoIvaConsulta.EliminarTipoIva(idTipoIva);
         }
+
+        public string ObtenerDescripcionTipoIva(int idTipoIva)
+        {
+            return tipoIvaConsulta.ObtenerDescripcionTipoIva(idTipoIva);
+        }
     }
 }

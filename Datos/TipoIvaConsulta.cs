@@ -93,7 +93,29 @@ namespace Datos
                 return rowsAffected > 0;
             }
         }
+        public string ObtenerDescripcionTipoIva(int idTipoIva)
+        {
+            MySqlConnection connection = conexionMysql.GetConexion();
+            string query = "SELECT Descripcion FROM tipoiva WHERE IdTipoIva = @idTipoIva";
 
+            using (MySqlCommand cmd = new MySqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@idTipoIva", idTipoIva);
+
+                object result = cmd.ExecuteScalar();
+
+                connection.Close();
+
+                if (result != null)
+                {
+                    return result.ToString();
+                }
+                else
+                {
+                    return "No se encontró la descripción";
+                }
+            }
+        }
     }
 }
 

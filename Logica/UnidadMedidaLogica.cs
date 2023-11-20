@@ -32,7 +32,21 @@ namespace Logica
 
         public bool EliminarUnidadMedida(int idUnidadMedida)
         {
+            // Verificar si hay productos asociados a la unidad de medida
+            if (unidadMedidaConsulta.TieneProductosAsociados(idUnidadMedida))
+            {
+                return false;
+            }
+
+            // No hay productos asociados, proceder con la eliminación
             return unidadMedidaConsulta.EliminarUnidadDeMedida(idUnidadMedida);
         }
+
+        public string ObtenerDescripcionUnidadMedida(int idUnidadMedida)
+        {
+            return unidadMedidaConsulta.ObtenerDescripcionUnidadMedida(idUnidadMedida);
+        }
+
+
     }
 }
