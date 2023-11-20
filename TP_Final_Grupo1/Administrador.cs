@@ -33,6 +33,8 @@ namespace TP_Final_Grupo1
             lblOpcion5.Text = "TipoIva";
             lblOpcion1.Text = "Descripcion";
             lblOpcion2.Text = "Porcentaje";
+            lblOpcion4.Visible = false;
+            lblOpcion6.Visible = false;
             txtOpcion1.Visible = true;
             txtOpcion2.Visible = true;
             txtOpcion3.Visible = false;
@@ -43,6 +45,9 @@ namespace TP_Final_Grupo1
             cboOpcion.Visible = false;
             cboUnidadMedida.Visible = false;
             lblOpcion3.Visible = false;
+            dtpFechaAlta.Visible = false;
+            dtpFechaBaja.Visible = false;
+            cboTipoIva.Visible = false;
             ConfigurarColumnasTipoIvaDataGridView();
             CargarDatosTipoIvaDataGridView();
         }
@@ -52,6 +57,11 @@ namespace TP_Final_Grupo1
             dgvOpcion.Rows.Clear();
             lblOpcion1.Visible = true;
             lblOpcion2.Visible = true;
+            lblOpcion4.Visible = false;
+            lblOpcion6.Visible = false;
+            dtpFechaAlta.Visible = false;
+            dtpFechaBaja.Visible = false;
+            cboTipoIva.Visible = false;
             lblOpcion5.Text = "TipoIva";
             lblOpcion1.Text = "Descripcion";
             lblOpcion2.Text = "Porcentaje";
@@ -74,6 +84,12 @@ namespace TP_Final_Grupo1
             dgvOpcion.Rows.Clear();
             lblOpcion1.Visible = true;
             lblOpcion2.Visible = true;
+            lblOpcion4.Visible = false;
+            lblOpcion6.Visible = false;
+            dtpFechaAlta.Visible = false;
+            dtpFechaBaja.Visible = false;
+            cboTipoIva.Visible = false;
+
             lblOpcion5.Text = "TipoIva";
             lblOpcion1.Text = "Descripcion";
             lblOpcion2.Text = "Porcentaje";
@@ -94,6 +110,12 @@ namespace TP_Final_Grupo1
             dgvOpcion.Rows.Clear();
             lblOpcion1.Visible = true;
             lblOpcion2.Visible = false;
+            lblOpcion4.Visible = false;
+            lblOpcion6.Visible = false;
+            dtpFechaAlta.Visible = false;
+            dtpFechaBaja.Visible = false;
+            cboTipoIva.Visible = false;
+
             lblOpcion5.Text = "AltaUnidadMedida";
             txtOpcion1.Text = "";
             lblOpcion1.Text = "Descripcion";
@@ -104,6 +126,7 @@ namespace TP_Final_Grupo1
             btn_Eliminar.Visible = false;
             chkHabilitado.Visible = true;
             cboOpcion.Visible = false;
+            cboUnidadMedida.Visible = false;
             ConfigurarColumnasUnidadDeMedidaDataGridView();
             CargarDatosUnidadDeMedidaDataGridView();
             //CargarDatosUnidadMedidaSeleccionado();
@@ -114,18 +137,28 @@ namespace TP_Final_Grupo1
             LimpiarCampos();
             dgvOpcion.Rows.Clear();
             lblOpcion1.Visible = true;
+            lblOpcion2.Visible = false;
+            lblOpcion3.Visible = false;
+            lblOpcion4.Visible = false;
+            lblOpcion6.Visible = false;
+            dtpFechaAlta.Visible = false;
+            dtpFechaBaja.Visible = false;
+            cboTipoIva.Visible = false;
+
             lblOpcion5.Text = "AltaUnidadMedida";
             lblOpcion1.Text = "Descripcion";
             txtOpcion1.Visible = true;
+            txtOpcion3.Visible = false;
             btn_Agregar.Visible = false;
             btn_Modificar.Visible = true;
             btn_Eliminar.Visible = false;
             chkHabilitado.Visible = true;
             cboOpcion.Visible = true;
+            cboUnidadMedida.Visible=false;
             ConfigurarColumnasUnidadDeMedidaDataGridView();
             CargarDatosUnidadDeMedidaDataGridView();
-            //CargarDatosUnidadMedidaSeleccionado();
-            //CargarUnidadesMedidaEnComboBox();
+            CargarDatosUnidadMedidaSeleccionado();
+            CargarUnidadesMedidaEnComboBox();
         }
         private void eliminarUnidadDeMedidaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -134,6 +167,12 @@ namespace TP_Final_Grupo1
             lblOpcion5.Text = "AltaUnidadMedida";
             lblOpcion1.Visible = true;
             lblOpcion1.Text = "Descripcion";
+            lblOpcion4.Visible = false;
+            lblOpcion6.Visible = false;
+            dtpFechaAlta.Visible = false;
+            dtpFechaBaja.Visible = false;
+            cboTipoIva.Visible = false;
+
             txtOpcion1.Visible = true;
             txtOpcion2.Visible = false;
             btn_Agregar.Visible = false;
@@ -210,6 +249,11 @@ namespace TP_Final_Grupo1
             lblOpcion1.Visible = true;
             lblOpcion2.Visible = false;
             lblOpcion3.Visible = true;
+            lblOpcion4.Visible = false;
+            lblOpcion6.Visible = false;
+            dtpFechaAlta.Visible = false;
+            dtpFechaBaja.Visible = false;
+            cboTipoIva.Visible = false;
 
             lblOpcion1.Text = "Descripcion";
             lblOpcion2.Text = "Unidad de Medida";
@@ -265,12 +309,12 @@ namespace TP_Final_Grupo1
             chkHabilitado.Visible = false;
             cboOpcion.Visible = false;
             cboUnidadMedida.Visible = false;
+            cboTipoIva.Visible = true;
 
             ConfigurarColumnasClienteDataGridView();
             CargarDatosClienteDataGridView();
             CargarTipoIvaClienteEnComboBoxProducto();
         }
-
         private void modificacionClienteToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
@@ -310,9 +354,44 @@ namespace TP_Final_Grupo1
             CargarDatosClienteSeleccionado();
             CargarClientesEnComboBox();
         }
-
         private void eliminarClienteToolStripMenuItem3_Click(object sender, EventArgs e)
         {
+            LimpiarCampos();
+            dgvOpcion.Rows.Clear();
+            lblOpcion1.Visible = true;
+            lblOpcion2.Visible = true;
+            lblOpcion3.Visible = true;
+            lblOpcion4.Visible = true;
+            lblOpcion6.Visible = true;
+            dtpFechaAlta.Visible = true;
+            dtpFechaBaja.Visible = true;
+
+            lblOpcion5.Text = "Cliente";
+            lblOpcion1.Text = "Razon Social";
+            lblOpcion2.Text = "Limite de Credito";
+            lblOpcion3.Text = "Tipo de Iva";
+            lblOpcion4.Text = "Fecha Alta";
+            lblOpcion6.Text = "Fecha Baja";
+
+            txtOpcion1.Visible = true;
+            txtOpcion2.Visible = true;
+            txtOpcion3.Visible = false;
+            txtOpcion4.Visible = false;
+            txtOpcion6.Visible = false;
+
+            btn_Agregar.Visible = false;
+            btn_Modificar.Visible = false;
+            btn_Eliminar.Visible = true;
+            chkHabilitado.Visible = false;
+            cboOpcion.Visible = true;
+            cboTipoIva.Visible = true;
+
+            ConfigurarColumnasClienteDataGridView();
+            CargarDatosClienteDataGridView();
+            CargarTipoIvaClienteEnComboBoxProducto();
+            CargarDatosClienteSeleccionado();
+            CargarClientesEnComboBox();
+
 
         }
 
@@ -490,7 +569,7 @@ namespace TP_Final_Grupo1
                         break;
 
                     case "AltaUnidadMedida":
-                        // Obtén los datos del formulario o de donde sea necesario
+                        // Obtén los datos del formulario
                         UnidadDeMedida unidadMedida = ObtenerDatosDelFormularioUnidadMedida();
                         if (!string.IsNullOrEmpty(txtOpcion1.Text))
                         {
@@ -541,7 +620,7 @@ namespace TP_Final_Grupo1
             if (resultado)
             {
                 MessageBox.Show($"{tipo} editado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LimpiarCampos();
+                
                 ActualizarDataGridView();
 
                 // Según el tipo, actualiza los controles específicos
@@ -551,24 +630,28 @@ namespace TP_Final_Grupo1
                         CargarDatosTipoIvaDataGridView();
                         CargarDatosTipoIvaSeleccionado();
                         CargarTiposIvaEnComboBox();
+                        LimpiarCampos();
                         break;
 
                     case "Unidad de Medida":
                         CargarDatosUnidadDeMedidaDataGridView();
                         CargarDatosUnidadMedidaSeleccionado();
                         CargarUnidadesMedidaEnComboBox();
+                        LimpiarCampos();
                         break;
 
                     case "Producto":
                         CargarDatosProductoDataGridView();
                         CargarDatosProductoSeleccionado();
                         CargarProductosEnComboBox();
+                        LimpiarCampos();
                         break;
 
                     case "Cliente":
                         CargarDatosClienteDataGridView();
                         CargarDatosClienteSeleccionado();
                         CargarClientesEnComboBox();
+                        LimpiarCampos();
                         break;
 
                     default:
@@ -625,6 +708,19 @@ namespace TP_Final_Grupo1
                            
                         }
                         break;
+
+                    case "Cliente":
+                        // Obtén el IdTipoIva del elemento seleccionado en el ComboBox o DataGridView
+                        if (cboOpcion.SelectedItem != null && cboOpcion.SelectedItem is Cliente clienteSeleccionado)
+                        {
+                            int idCliente = clienteSeleccionado.IdCliente;
+
+                            // Llama al método de la capa de lógica para eliminar el tipo de IVA
+                            bool resultado = clienteLogica.EliminarCliente(idCliente);
+                            ManejarResultadoEliminar(resultado, "Cliente");
+
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -640,7 +736,7 @@ namespace TP_Final_Grupo1
             if (resultado)
             {
                 MessageBox.Show($"{tipo} Eliminado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LimpiarCampos();
+                
                 ActualizarDataGridView();
 
                 // Según el tipo, actualiza los controles específicos
@@ -650,19 +746,29 @@ namespace TP_Final_Grupo1
                         // Actualiza el ComboBox y/o DataGridView después de la eliminación
                         CargarTiposIvaEnComboBox();
                         ActualizarDataGridView();
+                        LimpiarCampos();
                         break;
 
                     case "Unidad de Medida":
                         CargarUnidadesMedidaEnComboBox();
                         ActualizarDataGridView();
+                        LimpiarCampos();
                         break;
 
                     case "Producto":
-                        CargarProductosEnComboBox();
                         CargarDatosProductoDataGridView();
+                        CargarProductosEnComboBox();
                         ActualizarDataGridView();
+                        LimpiarCampos();
                         break;
 
+                    case "Cliente":
+                        CargarDatosClienteDataGridView();
+                        CargarDatosClienteSeleccionado();
+                        CargarClientesEnComboBox();
+                        ActualizarDataGridView();
+                        LimpiarCampos();
+                        break;
                     default:
                         break;
                 }
@@ -680,7 +786,8 @@ namespace TP_Final_Grupo1
             txtOpcion1.Text = "";
             txtOpcion2.Text = "";
             txtOpcion3.Text = "";
-            lblOpcion5.Text = "";
+            txtOpcion4.Text = "";
+            lblOpcion6.Text = "";
             if (lblOpcion5.Text =="Producto")
             {
             cboUnidadMedida.SelectedIndex = 0;
@@ -689,6 +796,7 @@ namespace TP_Final_Grupo1
             {
                 cboTipoIva.SelectedIndex = 0;
             }
+            
         }
         private void ActualizarDataGridView()
         {            
